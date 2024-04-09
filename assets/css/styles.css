@@ -19,7 +19,7 @@ body {
 .V-card-container {
   position: relative;
   text-align: center;
-  background: linear-gradient(#00e5ff, #b400fb);
+ background: #121212;
   flex-direction: column;
   align-content: center;
   width: 20vw;
@@ -29,6 +29,8 @@ body {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   z-index: 6;
   padding: 23px;
+  animation: border-color-animation 5s linear infinite;
+ 
 }
 
 .V-card-container::after {
@@ -39,6 +41,10 @@ body {
   z-index: -1;
   border-radius: 16px;
 }
+
+
+
+
 
 img,
 .profile-image {
@@ -96,3 +102,25 @@ button:nth-child(2) {
 button:hover {
   transform: scale(1.1);
 }
+
+
+
+
+@keyframes border-color-animation {
+  0% {
+    border: 5px solid #00e5ff; /* Bleu */
+  }
+  25% {
+    border: 5px solid #0099ff; /* Bleu clair */
+  }
+  50% {
+    border: 5px solid #b400fb; /* Violet */
+  }
+  75% {
+    border: 5px solid #ff3399; /* Rose */
+  }
+  100% {
+    border: 5px solid #ff6666; /* Rouge */
+  }
+}
+
