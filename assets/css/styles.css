@@ -19,7 +19,7 @@ body {
 .V-card-container {
   position: relative;
   text-align: center;
- background: #121212;
+  background: #121212;
   flex-direction: column;
   align-content: center;
   width: 20vw;
@@ -30,7 +30,6 @@ body {
   z-index: 6;
   padding: 23px;
   animation: border-color-animation 5s linear infinite;
- 
 }
 
 .V-card-container::after {
@@ -41,10 +40,6 @@ body {
   z-index: -1;
   border-radius: 16px;
 }
-
-
-
-
 
 img,
 .profile-image {
@@ -103,9 +98,6 @@ button:hover {
   transform: scale(1.1);
 }
 
-
-
-
 @keyframes border-color-animation {
   0% {
     border: 5px solid #00e5ff; /* Bleu */
@@ -124,3 +116,18 @@ button:hover {
   }
 }
 
+@media screen and (min-width: 420px) and (max-width: 1200px) {
+  .V-card-container {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .V-card-container {
+    position: relative;
+    width: 300px;
+    margin-left: auto;
+  }
+}
